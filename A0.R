@@ -35,14 +35,14 @@ hours_in_a_year <- 24 * 365
 make_introduction <- function(name, age){
   return (sprintf("Hello, my name is %s, and I'm %d years old",name,age))
 }
-make_introduction(my_name, my_age)
+print(make_introduction(my_name, my_age))
  
 
 # Create a variable `my_intro` by passing your variables `my_name` and `my_age`
 # into your `make_introduction()` function
 
 my_intro = make_introduction("Chloe",21)
-print(my_intro)
+
 
 # Using the `str_count` function, create a variable `occurrences` that stores
 # the # of times the letter "e" appears in `my_intro`
@@ -131,10 +131,9 @@ fluidConversion(6523)
 # is 21 minutes long, how many episodes can the user watch? 
 # Return the number of episodes as an numeric type.
 
-parks_and_rec <- function(weeks, hrs)
-{
-  per_day_in_minutes <- hrs*60
-  num_episodes_per_day <- per_day_in_minutes / 21.0
+parks_and_rec <- function(weeks, hrs) {
+  given_hrs_in_minutes <- hrs*60
+  num_episodes_per_day <- given_hrs_in_minutes / 21.0
   num_episodes_per_week <- num_episodes_per_day * 7
   total_episodes <- num_episodes_per_week * weeks
   return(total_episodes)
@@ -152,10 +151,10 @@ print(top_three)
 
 # Using your vector and the `paste()` method, create a vector `excited` that
 # adds the phrase - " is a great movie!" to the end of each element `movies`
-excited=c(paste(movies,'is a great movie!'))
+excited = c(paste(movies,'is a great movie!'))
 print(excited)
 
 # Create a vector `without_four` by omitting the fourth element from `movies`
 # You should do this using a _negative index_ 
-without_four=movies[c(1:3,5,6)]
+without_four = movies[-4]
 print(without_four)
